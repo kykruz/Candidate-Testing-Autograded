@@ -32,7 +32,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 if (candidateAnswer === "Sally Ride") {
-  console.log("That's Correct!");
+  console.log("That's correct!");
 } else {
   console.log("Sorry, that is incorrect!")
 }
