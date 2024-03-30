@@ -34,11 +34,11 @@ for (let i=0; i < questions.length; i++) {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  console.log(`${questions[0]}\nYour Answer: ${candidateAnswers[0]}\nCorrect Answer: ${correctAnswers[0]}`,
-  `\n\n${questions[1]}\nYour Answer: ${candidateAnswers[1]}\nCorrect Answer: ${correctAnswers[1]}`,
-  `\n\n${questions[2]}\nYour Answer: ${candidateAnswers[2]}\nCorrect Answer: ${correctAnswers[2]}`,
-  `\n\n${questions[3]}\nYour Answer: ${candidateAnswers[3]}\nCorrect Answer: ${correctAnswers[3]}`,
-  `\n\n${questions[4]}\nYour Answer: ${candidateAnswers[4]}\nCorrect Answer: ${correctAnswers[4]}`)
+  console.log(`1) ${questions[0]}\nYour Answer: ${candidateAnswers[0]}\nCorrect Answer: ${correctAnswers[0]}`,
+  `\n\n2) ${questions[1]}\nYour Answer: ${candidateAnswers[1]}\nCorrect Answer: ${correctAnswers[1]}`,
+  `\n\n3) ${questions[2]}\nYour Answer: ${candidateAnswers[2]}\nCorrect Answer: ${correctAnswers[2]}`,
+  `\n\n4) ${questions[3]}\nYour Answer: ${candidateAnswers[3]}\nCorrect Answer: ${correctAnswers[3]}`,
+  `\n\n5) ${questions[4]}\nYour Answer: ${candidateAnswers[4]}\nCorrect Answer: ${correctAnswers[4]}`)
   
 
 
