@@ -38,16 +38,26 @@ function gradeQuiz(candidateAnswers) {
   `\n\n2) ${questions[1]}\nYour Answer: ${candidateAnswers[1]}\nCorrect Answer: ${correctAnswers[1]}`,
   `\n\n3) ${questions[2]}\nYour Answer: ${candidateAnswers[2]}\nCorrect Answer: ${correctAnswers[2]}`,
   `\n\n4) ${questions[3]}\nYour Answer: ${candidateAnswers[3]}\nCorrect Answer: ${correctAnswers[3]}`,
-  `\n\n5) ${questions[4]}\nYour Answer: ${candidateAnswers[4]}\nCorrect Answer: ${correctAnswers[4]}`)
+  `\n\n5) ${questions[4]}\nYour Answer: ${candidateAnswers[4]}\nCorrect Answer: ${correctAnswers[4]}`);
   
 
+  
+  numCorrectAnswers = Number(candidateAnswers[0] === correctAnswers[0]);
+  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[1] === correctAnswers[1]);
+  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[2] === correctAnswers[2]);
+  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[3] === correctAnswers[3]);
+  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[4] === correctAnswers [4]);
 
-
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
-  return grade;
+ 
+  let grade = numCorrectAnswers/5*100;  //TODO 3.2 use this variable to calculate the candidates score. (Number of Correct Answers) / (Number of Quiz Questions) * 100
+  console.log(`\n>>> Overall Grade: ${grade}% (${numCorrectAnswers} of 5 responses correct)<<<`);
+ if (numCorrectAnswers >= 4) {
+  console.log('>>> Status: PASSED <<<')
+ } else {
+  console.log('>>> Status: FAILED <<<')
+ }
+  return grade
+  
 }
 
 function runProgram() {
