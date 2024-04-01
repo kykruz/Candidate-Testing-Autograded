@@ -40,13 +40,23 @@ function gradeQuiz(candidateAnswers) {
   `\n\n4) ${questions[3]}\nYour Answer: ${candidateAnswers[3]}\nCorrect Answer: ${correctAnswers[3]}`,
   `\n\n5) ${questions[4]}\nYour Answer: ${candidateAnswers[4]}\nCorrect Answer: ${correctAnswers[4]}`);
   
-
+  comCandidateAnswers = [];
+   for (let i=0; i < candidateAnswers.length; i++) {
+    let capitalizeArray = candidateAnswers[i].toUpperCase();
+    comCandidateAnswers.push(capitalizeArray);
+   }
   
-  numCorrectAnswers = Number(candidateAnswers[0] === correctAnswers[0]);
-  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[1] === correctAnswers[1]);
-  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[2] === correctAnswers[2]);
-  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[3] === correctAnswers[3]);
-  numCorrectAnswers = numCorrectAnswers + Number(candidateAnswers[4] === correctAnswers [4]);
+  comCorrectAnswers = [];
+   for (let i=0; i < correctAnswers.length; i++) {
+    let capitalizeArray = correctAnswers[i].toUpperCase();
+    comCorrectAnswers.push(capitalizeArray);
+   }
+
+  numCorrectAnswers = Number(comCandidateAnswers[0] === comCorrectAnswers[0]);
+  numCorrectAnswers = numCorrectAnswers + Number(comCandidateAnswers[1] === comCorrectAnswers[1]);
+  numCorrectAnswers = numCorrectAnswers + Number(comCandidateAnswers[2] === comCorrectAnswers[2]);
+  numCorrectAnswers = numCorrectAnswers + Number(comCandidateAnswers[3] === comCorrectAnswers[3]);
+  numCorrectAnswers = numCorrectAnswers + Number(comCandidateAnswers[4] === comCorrectAnswers[4]);
 
  
   let grade = numCorrectAnswers/5*100;  //TODO 3.2 use this variable to calculate the candidates score. (Number of Correct Answers) / (Number of Quiz Questions) * 100
